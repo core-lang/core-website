@@ -1,193 +1,191 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>io about</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="home.css">
-		<link rel="stylesheet" href="home_header.css">
-		<link rel="stylesheet" href="about.css">
-		<link rel="stylesheet" href="fonts/Helvetica/fonts.css">
-		<script type="module" src="js/KeyNav/KeyNav.js"></script>
-		<style>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Core Programming Language – About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home_header.css">
+  <style>
+    .text {
+      margin-top: 60px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      animation: fadein 1s;
+    }
 
-        </style>
-	</head>
-	<body>
-		<div class="container leftSpace">
-		    <div class="header">
-            	<div class="pageHeader">
-			        <div class="topSpace"></div>
-					<div class="pageTitle"><a href="index.html">Io</a></div>
-					<div class="pageSubtitle"> / about </div>
-			    </div>
-			</div>
-			<div class="text">
-			    <div class="description">
-                Io is a programming language focused on expressiveness through simplicity. 
-                <!-- 
-                Io is a highly dynamic prototype-based programming language. 
-                The ideas in Io are mostly inspired by Smalltalk (objects, message passing), Self (prototype-based), NewtonScript (differential inheritance), Act1 (actors and futures), Lisp (code is a runtime inspectable / modifiable tree) and Lua (small, embeddable).
-                 -->
-                </div>
-                <div class="items">
+    .description {
+      animation: fadein 1s;
+      margin-bottom: 80px;
+    }
 
-                    <!--
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            focus
-                        </div>
-                        <div class="chunkRight">
-                                 expressiveness through simplicity
-                        </div>
-                    </div>
-                    -->
+    .moreLink a {
+      color: white;
+      font-weight: bold;
+    }
 
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            inspirations
-                        </div>
-                        <div class="chunkRight">
-                                Self, Lua, Smalltalk, NewtonScript, Act1, LISP
-                        </div>
-                    </div>
+    .moreLink a:hover {
+      color: #ccc;
+    }
 
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            pure
-                        </div>
-                        <div class="chunkRight">
-                                minimal syntax<br>
-                                all values are objects<br>
-                                prototype-based object model<br>
-                                everything is a message, even assignment<br>
-                                no keywords, no globals
-                        </div>
-                    </div>
-                    
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            dynamic
-                        </div>
-                        <div class="chunkRight">
-                                all messages are dynamic<br>
-                                code is a runtime modifiable tree of messages<br>
-                                arguments passed by expression, receiver controls eval<br>
-                                differential inheritance<br>
-                                become, transparent proxies, weak links
-                        </div>
-                    </div>
-                    
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            concurrent
-                        </div>
-                        <div class="chunkRight">
-                            coroutine based actors <br>
-                            transparent futures <br>
-                            automatic lock detection <br>
-                        </div>
-                    </div>
-                   
-                    <!--
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            accessible
-                        </div>
-                        <div class="chunkRight">
-                            small<br>
-                            open source
-                        </div>
-                    </div>
-                    -->
+    .items {
+      white-space: nowrap;
+      margin-top: 60px;
+      margin-left: 40px;
+      margin-bottom: 25px;
+      line-height: 21px;
+    }
 
-                    <div class="chunk">
-                        <div class="chunkLeft">
-                            implementation
-                        </div>
-                        <div class="chunkRight">
-                            small<br>
-                            open source<br>
-                            embeddable <br>
-                            multi-state <br>
-                            incremental collector <br>
-                        </div>
-                    </div>
+    /* --- chunk --- */
 
-                </div>
+    .chunk {
+      width: auto;
+      margin-bottom: 20px;
+      animation: fadein 1.5s;
+    }
 
-                <div class="items">
+    .chunkLeft {
+      vertical-align: top;
+      display: inline-block;
+      width: 110px;
+      text-align: right;
+      padding-right: 10px;
+      font-weight: 600;
+    }
 
-                    <div class="chunk">
-                        <div class="chunkLeft" style="color: #999;">
-                            status
-                        </div>
-                        <div class="chunkRight" style="color: #999;">
-                            binaries maintained by Jake Jeck<br>
-                            build system maintained by Ales Tsurko<br>
-                            patches welcome
-                        </div>
-                    </div>
+    .chunkRight {
+      display: inline-block;
+      padding-left: 13px;
+      border-left: 1px solid #666;
+      vertical-align: top;
+    }
 
-                    <div class="chunk">
-                        <div class="chunkLeft" style="color: #999;">
-                            history
-                        </div>
-                        <div class="chunkRight" style="color: #999;">
-                            created in 2002<br>
-                            actively developed until 2008<br>
-                        </div>
-                    </div>
+    @media only screen and (max-width: 475px) {
+      .text {
+        margin-top: 30px;
+      }
 
+      .items {
+        margin-top: 10px;
+        margin-left: 0px;
+      }
 
-                    <div class="chunk">
-                        <div class="chunkLeft" style="color: #999;">
-                            future
-                        </div>
-                        <div class="chunkRight" style="color: #999;">
-                            WASM implementation? <br>
-                            abstracted slots, hooks, notifications<br>
-                            separation from C stack, continuations<br>
-                            full set of value type primitives<br>
-                            capabilities, persistence, snapshots<br>
-                            transactions, durability<br>
-                            mobile transparent actors<br>
-                            default to utf8 strings/symbols<br>
-                            cleanup true/false<br>
-                        </div>
-                    </div>
+      .chunkLeft {
+        display: block;
+        text-align: left;
+        width: auto;
+      }
 
-                    <br><br><br><br>
+      .chunkRight {
+        margin-top: 10px;
+        padding-left: 10px;
+        width: auto;
+        white-space: normal;
+        border-left: 2px solid #555;
+
+      }
+
+      .wrapper {
+        display: inline-block;
+        border: 0px solid #f00;
+        white-space: normal;
+
+      }
+    }
+
+    .description a:link {
+      color: #aaa;
+    }
+
+    .description a:visited {
+      color: #aaa;
+    }
+
+    .description a:hover {
+      color: #ddd;
+    }
+
+    .period {
+      transition: all 6s;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<div class="container leftSpace">
+  <div class="header">
+    <div class="pageHeader">
+      <div class="topSpace"></div>
+      <div class="pageTitle"><a href="index.html">Core</a></div>
+      <div class="pageSubtitle"> / about </div>
+    </div>
+  </div>
+  <div class="text">
+    <div class="description">
+      Core is a modern programming language <br>
+      that uses a minimal set of orthogonal building blocks <br>
+      to ensure simplicity, readability, modifiability and stability.
+    </div>
+    <div class="items">
+      <div class="chunk">
+        <div class="chunkLeft">
+          modern
+        </div>
+        <div class="chunkRight">
+          generics and traits <br>
+          all values are objects <br>
+          expressions instead of statements
+        </div>
+      </div>
+
+      <div class="chunk">
+        <div class="chunkLeft">
+          minimal
+        </div>
+        <div class="chunkRight">
+          no modifiers <br>
+          no exceptions <br>
+          no null pointers <br>
+          no static members <br>
+          no collection literals <br>
+          no implicit conversions <br>
+          no method overloading
+        </div>
+      </div>
 
 
-                    <!-- 
-                    <div class="chunk">
-                        <div class="chunkLeft" style="color: #999;">
-                            implementation
-                        </div>
-                        <div class="chunkRight" style="color: #999;">
-                            multi-state <br>
-                            incremental collector <br>
-                            weak links <br>
-                            become <br>
-                            transparent proxies
-                        </div>
-                    </div>
+      <div class="chunk">
+        <div class="chunkLeft">
+          typed
+        </div>
+        <div class="chunkRight">
+          the compiler rejects ill-typed code<br>
+          values do not have "magic" methods<br>
+          all operations used need to be declared
+        </div>
+      </div>
 
-                </div>
-                <br><br>
-
-                    when became clear that maintaining a multi-platform build system and C implementation was too time consuming. 
-                <br>
-                <a href="https://github.com/quag">Jonathan Wright</a>, 
-                <a href="https://github.com/doublec">Chris Double</a>, 
-                <a href="https://github.com/jeremytregunna">Jeremy Tregunna</a>, and
-                <a href="https://github.com/richcollins">Rich Collins</a>. 
-                <br>
-                -->
-
-                <br>
-			</div>
-		</div>
-	</body>
+      <div class="chunk">
+        <div class="chunkLeft">
+          accessible
+        </div>
+        <div class="chunkRight">
+          safe<br>
+          small<br>
+          hackable<br>
+          open source
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="description">
+      <b>History</b>
+      <br><br>
+      Core is derived from Dora, a language created by Dominik Inführ in 2015.<br>
+      Thanks to everyone that made contributions.
+    </div>
+  </div>
+</div>
+</body>
 </html>

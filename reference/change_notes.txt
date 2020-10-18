@@ -1,3 +1,0 @@
-let url = 'https://api.blockcypher.com/v1/btc/main';
-let response = await fetch(url);
-let commits = await response.json(); // read response body and parse as JSON

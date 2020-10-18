@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Core Language – Changes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home_header.css">
+  <style>
+      .text {
+          margin-top: 60px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          animation: fadein 1s;
+      }
+
+      .description {
+          animation: fadein 1s;
+          margin-bottom: 80px;
+      }
+
+      .moreLink a {
+          color: white;
+          font-weight: bold;
+      }
+
+      .moreLink a:hover {
+          color: #ccc;
+      }
+
+      .items {
+          white-space: nowrap;
+          margin-top: 60px;
+          margin-left: 40px;
+          margin-bottom: 25px;
+          line-height: 21px;
+      }
+
+      /* --- chunk --- */
+
+      .chunk {
+          width: auto;
+          margin-bottom: 20px;
+          animation: fadein 1.5s;
+      }
+
+      .chunkLeft {
+          vertical-align: top;
+          display: inline-block;
+          width: 110px;
+          text-align: right;
+          padding-right: 10px;
+          font-weight: 600;
+      }
+
+      .chunkRight {
+          display: inline-block;
+          padding-left: 13px;
+          border-left: 1px solid #666;
+          vertical-align: top;
+      }
+
+      @media only screen and (max-width: 475px) {
+          .text {
+              margin-top: 30px;
+          }
+
+          .items {
+              margin-top: 10px;
+              margin-left: 0px;
+          }
+
+          .chunkLeft {
+              display: block;
+              text-align: left;
+              width: auto;
+          }
+
+          .chunkRight {
+              margin-top: 10px;
+              padding-left: 10px;
+              width: auto;
+              white-space: normal;
+              border-left: 2px solid #555;
+
+          }
+
+          .wrapper {
+              display: inline-block;
+              border: 0px solid #f00;
+              white-space: normal;
+
+          }
+      }
+
+      .description a:link {
+          color: #aaa;
+      }
+
+      .description a:visited {
+          color: #aaa;
+      }
+
+      .description a:hover {
+          color: #ddd;
+      }
+
+      .period {
+          transition: all 6s;
+          color: black;
+      }
+  </style>
+</head>
+<body>
+<div class="container leftSpace">
+  <div class="header">
+    <div class="pageHeader">
+      <div class="topSpace"></div>
+      <div class="pageTitle"><a href="index.html">Core</a></div>
+      <div class="pageSubtitle"> / changes </div>
+    </div>
+  </div>
+  <div class="text">
+    <div class="items">
+      <div class="chunk">
+        <div class="chunkLeft">2022</div>
+        <div class="chunkRight">
+          add intrinsics for rounding floats<br>
+          add intrinsics for total order comparison on floats<br>
+          change type of integer literal from Int32 to Int64<br>
+          migrate number literal suffixes from L/I/D/F to i64/i32/f64/f32
+        </div>
+      </div>
+      <div class="chunk">
+        <div class="chunkLeft">2021</div>
+        <div class="chunkRight">
+          fix precedence of &<br>
+          refine annotation processing<br>
+          add intrinsics for the absolute value of floats<br>
+          add more functionality to Array, Result, String and Vector types<br>
+          rename Option#unwrap, Result#unwrap and Result#unwarpErr to Option#getOrPanic, Result#getOrPanic and Result#getErrOrPanic
+        </div>
+      </div>
+      <div class="chunk">
+        <div class="chunkLeft">2020</div>
+        <div class="chunkRight">
+          remove nil<br>
+          add enums<br>
+          add tuples<br>
+          add modules<br>
+          add varargs<br>
+          remove exceptions<br>
+          remove loop keyword<br>
+          add annotation keyword<br>
+          add Zero and Sizable traits<br>
+          migrate result type syntax from -> to :<br>
+          add popcnt/lzcount/tzcount intrinsics          
+        </div>
+      </div>
+      <div class="chunk">
+        <div class="chunkLeft">2019</div>
+        <div class="chunkRight">
+          add universal === operation<br>
+          remove secondary constructors<br>
+          replace modifiers with annotations<br>
+          migrate syntax of generics from <>/::<> to []<br>
+          rename Int/Long and Float/Double to Int32/Int64 and Float32/Float64<br>
+          add Equals, Identity, Hash, Default, Comparable, Sortable, Stringable and Option
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

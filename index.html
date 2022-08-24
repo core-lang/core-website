@@ -16,7 +16,21 @@
 			<div class="pageSubtitle">a modern, minimal programming language</div>
 		</div>
 	</div>
+	<div class="example">
+		<pre>
+enum Pet of Cat, Dog
+class Cat(let name: String, let lives: Int64)
+class Dog(let name: String, let years: Int64)
 
+fun describe(pet: Pet): String =
+  if pet
+    ... is Cat(let name, let lives) { "cat $name has $lives lives" }
+    ... is Dog(let name, let years) { "dog $name is $years old" }
+
+describe(Cat("Molly", 9))
+// → cat Molly has 9 lives
+		</pre>
+	</div>
 	<ul class="navigation">
 		<div class="link"><a href="about.html">about</a></div>
 		<div class="link"><a href="manifesto.html">manifesto</a></div>

@@ -88,9 +88,19 @@
     <div class=section>Conditions</div>
     <div class=code>
       let a = 2;
-
-      if a == 1 { "a is one" } else { "a is not one" }
+      if a == 1 { println("a is one") } else { println("a is not one") }
       <div class="result">a is not one</div>
+      
+      fun describeFloat(float: Float64) =
+        if float
+        ... === Float64.NaN { "not a number" }
+        ... .isFinite.not { "infinity" }
+        ... >= 0.0 { "positive" }
+        else { "negative" }
+      describeFloat(123.4)
+      <div class="result">"positive"</div>
+      describeFloat(1.0/0.0)
+      <div class="result">"infinity"</div>
     </div>
 
     <div class=section>Options</div>

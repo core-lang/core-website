@@ -21,16 +21,22 @@
       <div class="chunk">
         <div class="chunkLeft">2022</div>
         <div class="chunkRight">
-          add named arguments<br>
           remove unary operator <code>!</code><br>
+          remove binary operator <code>%</code><br>
           remove binary operators <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code><br>
           remove control flow keywords <code>break</code> and <code>continue</code><br>
+          remove procedure syntax, require result types for functions<br>
+          change numeric literal separator from <code>_</code> to <code>'</code><br>
+          change type of integer literals from <code>Int32</code> to <code>Int64</code><br>
+          change number literal suffixes from <code>L</code>/<code>I</code>/<code>D</code>/<code>F</code> to <code>i64</code>/<code>i32</code>/<code>f64</code>/<code>f32</code><br>
+          add named arguments<br>
           add unified condition expressions<br>
           add intrinsics for rounding floats<br>
           add intrinsics for total order comparison on floats<br>
-          change type of integer literal from <code>Int32</code> to <code>Int64</code><br>
-          implement <code>trait Hash</code> for <code>String</code>, <code>String</code> instances contain their hash code<br>
-          migrate number literal suffixes from <code>L</code>/<code>I</code>/<code>D</code>/<code>F</code> to <code>i64</code>/<code>i32</code>/<code>f64</code>/<code>f32</code>
+          add hash code field to <code>String</code><br>
+          add implementation of <code>trait Hash</code> for <code>String</code><br>
+          add higher-order functions to <code>Option</code> and <code>Result</code><br>
+          add implementation of <code>trait Equals</code>, <code>trait Hash</code>, <code>trait Stringable</code> to <code>Option</code> and <code>Result</code>
         </div>
       </div>
       <div class="chunk">
@@ -38,7 +44,7 @@
         <div class="chunkRight">
           fix precedence of <code>&</code><br>
           refine annotation processing<br>
-          improve naming of <code>Option</code> and <code>Result</code> methods<br>
+          change naming of <code>Option</code> and <code>Result</code> methods<br>
           add intrinsics for the absolute value of floats<br>
           add more functionality to <code>Array</code>, <code>Result</code>, <code>String</code> and <code>Vector</code> types
         </div>
@@ -47,26 +53,26 @@
         <div class="chunkLeft">2020</div>
         <div class="chunkRight">
           remove <code>nil</code><br>
+          remove exceptions<br>
+          remove <code>loop</code> keyword<br>
+          change result type syntax from <code>-></code> to <code>:</code><br>
           add enums<br>
           add tuples<br>
           add modules<br>
           add varargs<br>
-          remove exceptions<br>
-          remove <code>loop</code> keyword<br>
           add <code>annotation</code> keyword<br>
-          add <code>Zero</code> and <code>Sizable</code> traits<br>
-          migrate result type syntax from <code>-></code> to <code>:</code><br>
-          add popcnt/lzcount/tzcount intrinsics          
+          add popcnt/lzcount/tzcount intrinsics<br>
+          add <code>Zero</code> and <code>Sizable</code> traits
         </div>
       </div>
       <div class="chunk">
         <div class="chunkLeft">2019</div>
         <div class="chunkRight">
-          add universal <code>===</code> operation<br>
           remove secondary constructors<br>
-          replace modifiers with annotations<br>
-          migrate syntax of generics from <code><></code>/<code>::<></code> to <code>[]</code><br>
-          rename <code>Int</code>/<code>Long</code> and <code>Float</code>/<code>Double</code> to <code>Int32</code>/<code>Int64</code> and <code>Float32</code>/<code>Float64</code><br>
+          remove modifiers, replaced with annotations<br>
+          change syntax of generics from <code><></code>/<code>::<></code> to <code>[]</code><br>
+          change name of <code>Int</code>/<code>Long</code> and <code>Float</code>/<code>Double</code> to <code>Int32</code>/<code>Int64</code> and <code>Float32</code>/<code>Float64</code><br>
+          add universal <code>===</code> operation<br>
           add <code>Equals</code>, <code>Identity</code>, <code>Hash</code>, <code>Default</code>, <code>Comparable</code>, <code>Sortable</code>, <code>Stringable</code> and <code>Option</code>
         </div>
       </div>

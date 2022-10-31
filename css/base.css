@@ -1,8 +1,335 @@
+/* --------------------------------------------------------------------------
+[EXPERIMENTAL] Multi-axis, single variable font.
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single variable font is opt-in rather than the default.
+
+When using this, you will probably need to set font-variation-settings
+explicitly, e.g.
+
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+
+*/
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("../fonts/Inter.woff2") format("woff2");
+}
+
+:root {
+  font-family: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: auto;
+}
+
+html {
+  color: #f4f4ec;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #1e181e;
+  font-size: 15px;
+  line-height: 1.4667;
+  margin: 0px;
+}
+
+/* --- links --- */
+
+a:link,
+a:visited {
+  color: #565553;
+  text-decoration: none;
+  transition: background-color .15s linear, color .15s linear;
+}
+
+a:hover {
+  color: #3c3c3b;
+}
+
+/* -- content --- */
+
 .text {
+  max-width: 600px;
+  margin-right: 20px;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
+  font-weight: 300;
+  line-height: 28px;
   animation: fadein 1s;
+}
+
+.container {
+  position: relative;
+  width: auto;
+}
+
+/* --- nav --- */
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: fadein 1.5s;
+}
+
+.link, .linkFar, .linkDocs {
+  font-size: 60px;
+  line-height: 60px;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.15s, 0.15s;
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-timing-function: linear, linear;
+  /*
+  color: rgb(86, 85, 83);
+  */
+  color: rgb(106, 105, 103);
+  font-weight: bold;
+  letter-spacing: -2px;
+  list-style-position: outside;
+  text-decoration: none;
+  transition-duration: 0.15s, 0.15s;
+  transition-property: background-color, color;
+  transition-timing-function: linear, linear;
+}
+
+.link a, .linkFar a, .linkDocs a {
+  color: rgb(86, 85, 83);
+}
+
+
+.link a:hover {
+  color: #aaaa33;
+  /*
+  color: #2277ff;
+  color: #3c3c3b;
+  color: #a041ca;
+  color: #99c;
+  */
+}
+
+.linkFar a:hover {
+  color: #2dc6ad;
+  /*
+  color: #5e5b84;
+  color: #a77;
+  color: #3c3c3b;
+  color: #e28728;
+  color: #966;
+  */
+}
+
+.linkDocs a:hover {
+  color: #aaaa33;
+  /*
+  color: #b4b044;
+  color: #aaaa33;
+  */
+}
+
+/* ------------------- */
+
+@media only screen and (max-width: 885px) {
+  .link, .linkFar, .linkDocs
+  {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .link, .linkFar, .linkDocs
+  {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+
+@media only screen and (max-width: 475px) {
+  .link, .linkFar, .linkDocs{
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .link, .linkFar, .linkDocs{
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+/* --- index --- */
+
+.entry {
+  animation: fadein 2s;
+  display: inline-block;
+  border-left: 1px solid #444;
+  height: 70px;
+  margin-top: -1px;
+  width: 250px;
+  margin-left: -1px;
+  font-size: 14px;
+  transition: .15s;
+}
+
+.entry:hover {
+  color: #ccc;
+  border-left: 1px solid #777;
+  margin-left: -1px;
+  background-color: #3a3a3a;
+}
+
+.name {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  line-height: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.comment {
+  display: inline-block;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 15px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.topSpace {
+  padding-top: 180px;
+}
+
+.leftSpace {
+  margin-left: 100px;
+}
+
+.pageHeader {
+}
+
+.pageHeader a {
+  color: rgb(244, 244, 236);
+}
+
+.pageHeader a:hover {
+  color: #aaa;
+}
+
+.pageTitle {
+  text-transform: lowercase;
+  display: block;
+  font-size: 70px;
+  line-height: 35px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.pageTitle a {
+  font-family: inherit;
+  text-transform: inherit;
+  font-weight: inherit;
+}
+
+.pageSubtitle {
+  animation: fadein 1s;
+  color: rgb(244, 244, 236);
+  font-size: 15px;
+  line-height: 15px;
+  display: block;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 22px;
+}
+
+@media only screen and (max-width: 720px) {
+  .pageTitle {
+    font-size: 60px;
+    line-height: 30px;
+  }
+
+  .pageSubtitle {
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+
+  .topSpace {
+    padding-top: 50px;
+  }
+
+  .leftSpace {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .pageTitle {
+    font-size: 50px;
+    line-height: 25px;
+  }
+
+  .pageSubtitle {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .topSpace {
+    padding-top: 30px;
+  }
+
+  .leftSpace {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .pageTitle {
+    font-size: 32px;
+    line-height: 16px;
+  }
+
+  .pageSubtitle {
+    font-size: 14px;
+    line-height: 10px;
+  }
+
+  .topSpace {
+    padding-top: 30px;
+  }
+
+  .leftSpace {
+    padding-left: 20px;
+  }
+}
+
+/* --- fade in --- */
+
+@keyframes fadein {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 
 .section {
@@ -83,7 +410,6 @@
     width: auto;
     white-space: normal;
     border-left: 2px solid #555;
-
   }
 
   .wrapper {

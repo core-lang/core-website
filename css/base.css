@@ -69,6 +69,11 @@ a:hover {
   width: auto;
 }
 
+.example {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* --- nav --- */
 
 .navigation {
@@ -91,7 +96,7 @@ a:hover {
   color: rgb(86, 85, 83);
   */
   color: rgb(106, 105, 103);
-  font-weight: bold;
+  font-weight: 100;
   letter-spacing: -2px;
   list-style-position: outside;
   text-decoration: none;
@@ -230,7 +235,7 @@ a:hover {
   display: block;
   font-size: 70px;
   line-height: 35px;
-  font-weight: bold;
+  font-weight: 100;
   letter-spacing: -2px;
 }
 
@@ -246,7 +251,7 @@ a:hover {
   font-size: 15px;
   line-height: 15px;
   display: block;
-  font-weight: bold;
+  font-weight: 350;
   margin-top: 18px;
   margin-bottom: 22px;
 }

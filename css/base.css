@@ -89,6 +89,12 @@ a:hover {
 .example {
   padding-top: 32px;
   padding-bottom: 32px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
 }
 
 /* --- nav --- */

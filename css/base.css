@@ -87,6 +87,7 @@ a:hover {
 }
 
 .example {
+  animation: fadein 1s;
   padding-top: 32px;
   padding-bottom: 32px;
   overflow-x: scroll;
@@ -249,7 +250,6 @@ a:hover {
 }
 
 .pageSubtitle {
-  animation: fadein 1s;
   color: rgb(244, 244, 236);
   font-size: 15px;
   line-height: 15px;

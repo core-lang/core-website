@@ -19,7 +19,9 @@ explicitly, e.g.
 }
 
 :root {
-  font-family: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
+  --font-weight-text-regular: 300;
+  --font-weight-text-semibold: 500;
+  --font-weight-text-bold: 700;
   /* solarized colors */
   --color-base03:     #002b36;
   --color-base02:    #073642;
@@ -37,6 +39,9 @@ explicitly, e.g.
   --color-blue:      #268bd2;
   --color-cyan:      #2aa198;
   --color-green:     #859900;
+
+  font-family: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
+  font-weight: var(--font-weight-text-regular);
 }
 
 html, body {
@@ -47,6 +52,10 @@ html, body {
 html {
   color: #f4f4ec;
   -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+  font-weight: var(--font-weight-text-semibold);
 }
 
 body {
@@ -75,7 +84,7 @@ a:hover {
   max-width: 600px;
   margin-right: 20px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: var(--font-weight-text-regular);
   line-height: 28px;
   animation: fadein 1s;
 }
@@ -87,7 +96,6 @@ a:hover {
 
 .example {
   animation: fadein 1s;
-  padding-top: 32px;
   padding-bottom: 32px;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -196,24 +204,6 @@ a:hover {
   background-color: #3a3a3a;
 }
 
-.name {
-  display: block;
-  color: #fff;
-  font-weight: 600;
-  line-height: 15px;
-  margin-top: 15px;
-  margin-left: 15px;
-}
-
-.comment {
-  display: inline-block;
-  margin-top: 0px;
-  padding-top: 0px;
-  margin-left: 15px;
-  font-weight: 400;
-  color: #ccc;
-}
-
 .topSpace {
   padding-top: 180px;
 }
@@ -223,6 +213,7 @@ a:hover {
 }
 
 .pageHeader {
+  padding-bottom: 32px;
 }
 
 .pageHeader a {
@@ -351,7 +342,7 @@ a:hover {
 
 .moreLink a {
   color: white;
-  font-weight: bold;
+  font-weight: var(--font-weight-text-semibold);
 }
 
 .moreLink a:hover {
@@ -380,7 +371,7 @@ a:hover {
   width: 110px;
   text-align: right;
   padding-right: 10px;
-  font-weight: 600;
+  font-weight: var(--font-weight-text-bold);
 }
 
 .chunkRight {

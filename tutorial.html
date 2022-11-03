@@ -16,7 +16,7 @@
   </div>
 
   <div class="text" style="padding-top: 40px;">
-    <div class=section>Literals</div>
+    <h4>Literals</h4>
     <div class="code">
       1
       <div class="explanation">an integer value of type Int64</div>
@@ -40,7 +40,7 @@
       <div class="explanation">a string value of type String</div>
     </div>
 
-    <div class=section>Math</div>
+    <h4>Math</h4>
     <div class="code">
       1 + 1
       <div class="result">2</div>
@@ -49,7 +49,7 @@
       <div class="result">1.414214</div>
     </div>
 
-    <div class=section>Constants</div>
+    <h4>Constants</h4>
     <div class="code">
       let a = 1;
       <div class="explanation">the Int64 value 1 assigned to the constant a</div>
@@ -61,7 +61,7 @@
       <div class="explanation">compilation error – a constant cannot be reassigned</div>
     </div>
 
-    <div class=section>Variables</div>
+    <h4>Variables</h4>
     <div class="code">
       var a = 1
       <div class="explanation">the Int64 value 1 assigned to the variable a</div>
@@ -73,7 +73,7 @@
       <div class="result">6</div>
     </div>
 
-    <div class=section>Functions</div>
+    <h4>Functions</h4>
     <div class="code">
       fun sum(a: Int64, b: Int64) -> Int64 = a + b;
       <div class="explanation">a function accepting two arguments of type Int64</div>
@@ -83,7 +83,7 @@
       <div class="result">35</div>
     </div>
 
-    <div class=section>Conditions</div>
+    <h4>Conditions</h4>
     <div class=code>
       let a = 2;
       if a == 1 { println("a is one") } else { println("a is not one") }
@@ -101,10 +101,10 @@
       <div class="result">"infinity"</div>
     </div>
 
-    <div class=section>Options</div>
+    <h4>Options</h4>
     <div class=code>...</div>
 
-    <div class=section>Lists</div>
+    <h4>Lists</h4>
     <div class=code>
       let list = vec[Int64](30, 10, 20, 40);
       <div class="result">Vec(30, 10, 20, 40)</div>
@@ -131,7 +131,7 @@
       <div class="result">Vec(5, 10, 20, 40)</div>
     </div>
 
-    <div class=section>Maps</div>
+    <h4>Maps</h4>
     <div class=code>
       let map = HashMap[String, String](
         ("hello", "a greeting"),
@@ -154,7 +154,7 @@
       <div class="result">"not sure ..."</div>
     </div>
 
-    <div class=section>Strings</div>
+    <h4>Strings</h4>
     <div class=code>
       let a = "foo";
       <div class="result">"foo"</div>
@@ -169,7 +169,7 @@
       <div class="result">false</div>
     </div>
 
-    <div class=section>Loops</div>
+    <h4>Loops</h4>
     <div class=code>
       for i in Vector[Int64](1, 2, 3) {
         print(i.toString());
@@ -177,7 +177,7 @@
       <div class="result">"123"</div>
     </div>
 
-    <div class=section>Classes</div>
+    <h4>Classes</h4>
     <div class=code>
       class Person(let firstName: String, let lastName: String, var age: Int64) {
         fun fullName() -> String = "${self.firstName} ${self.lastName}";
@@ -195,7 +195,7 @@
       <div class="result">24</div>
     </div>
 
-    <div class=section>Modules</div>
+    <h4>Modules</h4>
     <div class=code>
       module Utilities {
         fun appendTest(value: String) -> String = "${value} test";
@@ -204,7 +204,7 @@
       <div class="result">"string test"</div>
     </div>
 
-    <div class=section>Namespaces (todo)</div>
+    <h4>Namespaces (todo)</h4>
     <div class=code>
       module animals;
 

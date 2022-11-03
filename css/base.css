@@ -1,27 +1,25 @@
-/* --------------------------------------------------------------------------
-[EXPERIMENTAL] Multi-axis, single variable font.
-
-Slant axis is not yet widely supported (as of February 2019) and thus this
-multi-axis single variable font is opt-in rather than the default.
-
-When using this, you will probably need to set font-variation-settings
-explicitly, e.g.
-
-  * { font-variation-settings: "slnt" 0deg }
-  .italic { font-variation-settings: "slnt" 10deg }
-
-*/
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
   src: url("../fonts/Inter.woff2") format("woff2");
 }
+@font-face {
+  font-family: 'Fira Code';
+  font-weight: 300 700;
+  src: url("../fonts/FiraCode.woff2") format("woff2");
+}
 
 :root {
+  --font-text: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
   --font-weight-text-regular: 300;
   --font-weight-text-semibold: 500;
   --font-weight-text-bold: 700;
+  --font-mono: 'Fira Code', monospace;
+  --font-weight-code-regular: 360;
+  --font-weight-code-semibold: 480;
+  --font-weight-code-bold: 600;
+
   /* solarized colors */
   --color-base03:     #002b36;
   --color-base02:    #073642;
@@ -40,7 +38,7 @@ explicitly, e.g.
   --color-cyan:      #2aa198;
   --color-green:     #859900;
 
-  font-family: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
+  font-family: var(--font-text);
   font-weight: var(--font-weight-text-regular);
 }
 
@@ -435,8 +433,10 @@ a:hover {
   color: black;
 }
 
-pre {
+code, pre {
   color: var(--color-base3);
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-code-regular);
 }
 
 .core-keyword {
@@ -444,7 +444,7 @@ pre {
 }
 
 .core-type {
-  font-weight: bold;
+  font-weight: var(--font-weight-code-bold);
 }
 
 .core-member {
@@ -465,8 +465,8 @@ pre {
 
 .code {
   color: #ddd;
-  font-family: monospace;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-code-regular);
   line-height: 22px;
   margin-bottom: 40px;
   margin-left: 30px;

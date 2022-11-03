@@ -109,9 +109,6 @@ a:hover {
   -webkit-transition-duration: 0.15s, 0.15s;
   -webkit-transition-property: background-color, color;
   -webkit-transition-timing-function: linear, linear;
-  /*
-  color: rgb(86, 85, 83);
-  */
   color: rgb(106, 105, 103);
   font-weight: 100;
   letter-spacing: -2px;
@@ -123,37 +120,20 @@ a:hover {
 }
 
 .link a, .linkFar a, .linkDocs a {
-  color: rgb(86, 85, 83);
+  color: rgb(166, 165, 163);
 }
 
 
 .link a:hover {
-  color: #aaaa33;
-  /*
-  color: #2277ff;
-  color: #3c3c3b;
-  color: #a041ca;
-  color: #99c;
-  */
+  color: #bbbb44;
 }
 
 .linkFar a:hover {
   color: #2dc6ad;
-  /*
-  color: #5e5b84;
-  color: #a77;
-  color: #3c3c3b;
-  color: #e28728;
-  color: #966;
-  */
 }
 
 .linkDocs a:hover {
   color: #aaaa33;
-  /*
-  color: #b4b044;
-  color: #aaaa33;
-  */
 }
 
 /* ------------------- */

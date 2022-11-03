@@ -16,17 +16,16 @@
 	</div>
 	<div class="example">
 		<pre>
-enum Pet of Cat, Dog
-class Cat(let name: String, let lives: Int64)
-class Dog(let name: String, let years: Int64)
+<span class="core-keyword">class</span> <span class="core-type">Cat</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>: <span class="core-type">String</span>, <span class="core-keyword">let</span> <span class="core-member">lives</span>: <span class="core-type">Int64</span>)
+<span class="core-keyword">class</span> <span class="core-type">Dog</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>: <span class="core-type">String</span>, <span class="core-keyword">let</span> <span class="core-member">years</span>: <span class="core-type">Int64</span>)
+<span class="core-keyword">union</span> <span class="core-type">Pet</span> <span class="core-keyword">of</span> <span class="core-type">Cat</span>, <span class="core-type">Dog</span>
 
-fun describe(pet: Pet): String =
-  if pet
-    ... is Cat(let name, let lives) { "cat $name has $lives lives" }
-    ... is Dog(let name, let years) { "dog $name is $years old" }
+<span class="core-keyword">fun</span> describe(<span class="core-member">pet</span>: <span class="core-type">Pet</span>): <span class="core-type">String</span> = <span class="core-keyword">if</span> <span class="core-member">pet</span>
+  ... <span class="core-keyword">is</span> <span class="core-type">Cat</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>, <span class="core-keyword">let</span> <span class="core-member">lives</span>) { <span class="core-literal">"cat <span class="core-interp">$name</span> has <span class="core-interp">$lives</span> lives"</span> }
+  ... <span class="core-keyword">is</span> <span class="core-type">Dog</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>, <span class="core-keyword">let</span> <span class="core-member">years</span>) { <span class="core-literal">"dog <span class="core-interp">$name</span> is <span class="core-interp">$years</span> of age"</span> }
 
-describe(Cat("Molly", 9))
-// → cat Molly has 9 lives</pre>
+describe(<span class="core-type">Cat</span>(<span class="core-literal">"Molly"</span>, <span class="core-literal">9</span>))
+<span class="core-comment">// → cat Molly has 9 lives</span></pre>
 	</div>
 	<ul class="navigation">
 		<div class="link"><a href="about.html">about</a></div>

@@ -477,7 +477,7 @@ code, pre {
 }
 
 .result::before {
-  content: '→ ';
+  content: '--> ';
 }
 
 .explanation {

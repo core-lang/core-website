@@ -15,89 +15,148 @@
     </div>
   </header>
   <main>
-    <h4>Literals</h4>
+    <h3>Literals</h3>
+    <h4>Numbers</h4>
     <div class="code">
-      1
-      <div class="explanation">an integer value of type Int64</div>
+1         -23         123'456
+<div class="explanation">some integer values of type Int64</div>
 
-      1i32
-      <div class="explanation">an integer value of type Int32</div>
+1i32      -23i32      123'456i32
+<div class="explanation">some integer values of type Int32</div>
 
-      1.0
-      <div class="explanation">a floating-point value of type Float64</div>
+1.0       -23.0       123'456.0
+<div class="explanation">some floating-point values of type Float64</div>
 
-      1.0f32
-      <div class="explanation">a floating-point value of type Float32</div>
-
-      true
-      <div class="explanation">a boolean value of type Bool</div>
-
-      false
-      <div class="explanation">a boolean value of type Bool</div>
-
-      "abc"
-      <div class="explanation">a string value of type String</div>
+1.0f32    -23.0f32    123'456.0f32
+<div class="explanation">some floating-point values of type Float32</div>
+    </div>
+    <h4>Booleans</h4>
+    <div class="code">
+true      false
+<div class="explanation">the two values of type Bool</div>
+    </div>
+    <h4>Strings</h4>
+    <div class="code">
+"abc"      ""
+<div class="explanation">some values of type String</div>
     </div>
 
-    <h4>Math</h4>
+    <h3>Math</h3>
     <div class="code">
-      1 + 1
-      <div class="result">2</div>
+1 + 1
+<div class="result">2</div>
 
-      2.0.sqrt()
-      <div class="result">1.414214</div>
+2.0.sqrt()
+<div class="result">1.414214</div>
     </div>
 
+    <h3>Definitions</h3>
     <h4>Constants</h4>
     <div class="code">
-      let a = 1;
-      <div class="explanation">the Int64 value 1 assigned to the constant a</div>
+let a = 1
+<div class="explanation">the Int64 value 1 assigned to the constant a</div>
 
-      a
-      <div class="result">1</div>
+a
+<div class="result">1</div>
 
-      a = 2
-      <div class="explanation">compilation error – a constant cannot be reassigned</div>
+a = 2
+<div class="explanation">compilation error – a constant cannot be reassigned</div>
     </div>
 
     <h4>Variables</h4>
     <div class="code">
-      var a = 1
-      <div class="explanation">the Int64 value 1 assigned to the variable a</div>
+var a = 1
+<div class="explanation">the Int64 value 1 assigned to the variable a</div>
 
-      a
-      <div class="result">1</div>
+a
+<div class="result">1</div>
 
-      a = 2 * 3
-      <div class="result">6</div>
+a = 2 * 3
+<div class="result">6</div>
     </div>
 
     <h4>Functions</h4>
     <div class="code">
-      fun sum(a: Int64, b: Int64) -> Int64 = a + b;
-      <div class="explanation">a function accepting two arguments of type Int64</div>
-      <div class="explanation">and returning a value of type Int64</div>
+fun sum(a: Int64, b: Int64): Int64 = a + b
+<div class="explanation">a function accepting two arguments of type Int64</div>
+<div class="explanation">and returning a value of type Int64</div>
 
-      sum(12, 23)
-      <div class="result">35</div>
+sum(12, 23)
+<div class="result">35</div>
     </div>
 
+
+    <h4>Classes</h4>
+    <div class=code>
+class Person(let firstName: String, let lastName: String, var age: Int64) {
+  fun fullName(): String = "${self.firstName} ${self.lastName}"
+}
+
+let alice = Person("Alice", "Smith", 23)
+alice.lastName
+<div class="result">"Smith"</div>
+
+alice.fullName()
+<div class="result">"Alice Smith"</div>
+
+alice.age = 24
+alice.age
+<div class="result">24</div>
+    </div>
+
+    <h4>Modules (not implemented)</h4>
+    <div class=code>
+module Utilities {
+  fun appendTest(value: String): String = "${value} test"
+}
+Utilities.appendTest("string")
+<div class="result">"string test"</div>
+    </div>
+
+    <h4>Namespaces (not implemented)</h4>
+
+    <h3>Control Flow</h3>
     <h4>Conditions</h4>
     <div class=code>
-      let a = 2;
-      if a == 1 { println("a is one") } else { println("a is not one") }
-      <div class="result">a is not one</div>
+let a = 2
+if a == 1 { println("a is one") } else { println("a is not one") }
+<div class="result">a is not one</div>
 
-      fun describeFloat(float: Float64) =
-        if float
-        ... === Float64.NaN { "not a number" }
-        ... .isFinite.not { "infinity" }
-        ... >= 0.0 { "positive" }
-        else { "negative" }
-      describeFloat(123.4)
-      <div class="result">"positive"</div>
-      describeFloat(1.0/0.0)
-      <div class="result">"infinity"</div>
+fun describeFloat(float: Float64): String =
+  if float
+  ... === Float64.NaN { "not a number" }
+  ... .isFinite.not   { "infinity" }
+  ... >= 0.0          { "positive" }
+  else                { "negative" }
+
+describeFloat(123.4)
+<div class="result">"positive"</div>
+describeFloat(1.0/0.0)
+<div class="result">"infinity"</div>
+    </div>
+
+    <h4>Loops</h4>
+    <div class=code>
+for i in List[Int64](1, 2, 3) {
+  print(i.toString())
+}
+<div class="result">"123"</div>
+    </div>
+
+    <h3>Basic Types</h3>
+    <h4>Strings</h4>
+    <div class=code>
+let a = "foo"
+<div class="result">"foo"</div>
+
+let c = a + "bar"
+<div class="result">"foobar"</div>
+
+c.size()
+<div class="result">6</div>
+
+c.isEmpty()
+<div class="result">false</div>
     </div>
 
     <h4>Options</h4>
@@ -105,110 +164,47 @@
 
     <h4>Lists</h4>
     <div class=code>
-      let list = vec[Int64](30, 10, 20, 40);
-      <div class="result">Vec(30, 10, 20, 40)</div>
+let list = List[Int64](30, 10, 20, 40)
+<div class="result">List(30, 10, 20, 40)</div>
 
-      list.length()
-      <div class="result">4</div>
+list.size()
+<div class="result">4</div>
 
-      list(0)
-      <div class="result">30</div>
+list(0)        // same as list.get(0)
+<div class="result">30</div>
 
-      list(0) = 5
-      <div class="result">Vec(5, 10, 20, 40)</div>
+list(0) = 5    // same as list.set(0, 5)
+<div class="result">List(5, 10, 20, 40)</div>
 
-      list.first()
-      <div class="result">Some(5)</div>
+list.first()
+<div class="result">Some(5)</div>
 
-      list.last()
-      <div class="result">Some(40)</div>
+list.last()
+<div class="result">Some(40)</div>
 
-      d.removeAt(3)
-      <div class="result">Vec(5, 10, 20)</div>
+d.removeAt(3)
+<div class="result">List(5, 10, 20)</div>
 
-      d.push(40)
-      <div class="result">Vec(5, 10, 20, 40)</div>
+d.push(40)
+<div class="result">List(5, 10, 20, 40)</div>
     </div>
 
     <h4>Maps</h4>
     <div class=code>
-      let map = HashMap[String, String](
-        ("hello", "a greeting"),
-        ("goodbye", "a parting"));
-      <div class="result">HashMap(("hello", "a greeting"), ("goodbye", "a parting"))</div>
+let map = HashMap[String, String](("hello", "a greeting"), ("goodbye", "a parting"))
+<div class="result">HashMap(("hello", "a greeting"), ("goodbye", "a parting"))</div>
 
-      map.contains("hello")
-      <div class="result">true</div>
+map.contains("hello")
+<div class="result">true</div>
 
-      map.get("hello")
-      <div class="result">Some(a greeting)</div>
+map.get("hello")
+<div class="result">Some("a greeting")</div>
 
-      map.insert("ciao", "not sure ...")
-      <div class="result">HashMap(
-        ("hello", "a greeting"),
-        ("goodbye", "a parting"),
-        ("ciao", "not sure ..."))</div>
+map.insert("ciao", "not sure ...")
+<div class="result">HashMap(("hello", "a greeting"), ("goodbye", "a parting"), ("ciao", "not sure ..."))</div>
 
-      map.remove("ciao")
-      <div class="result">"not sure ..."</div>
-    </div>
-
-    <h4>Strings</h4>
-    <div class=code>
-      let a = "foo";
-      <div class="result">"foo"</div>
-
-      let c = a + "bar";
-      <div class="result">"foobar"</div>
-
-      c.length()
-      <div class="result">6</div>
-
-      c.isEmpty()
-      <div class="result">false</div>
-    </div>
-
-    <h4>Loops</h4>
-    <div class=code>
-      for i in Vector[Int64](1, 2, 3) {
-        print(i.toString());
-      }
-      <div class="result">"123"</div>
-    </div>
-
-    <h4>Classes</h4>
-    <div class=code>
-      class Person(let firstName: String, let lastName: String, var age: Int64) {
-        fun fullName() -> String = "${self.firstName} ${self.lastName}";
-      }
-
-      let alice = Person("Alice", "Smith", 23);
-      alice.lastName;
-      <div class="result">"Smith"</div>
-
-      alice.fullName();
-      <div class="result">"Alice Smith"</div>
-
-      alice.age = 24;
-      alice.age;
-      <div class="result">24</div>
-    </div>
-
-    <h4>Modules</h4>
-    <div class=code>
-      module Utilities {
-        fun appendTest(value: String) -> String = "${value} test";
-      }
-      Utilities::appendTest("string");
-      <div class="result">"string test"</div>
-    </div>
-
-    <h4>Namespaces (todo)</h4>
-    <div class=code>
-      module animals;
-
-      class Dog(let name: String)
-      <div class="explanation">use animals::Dog to refer to Dog from other source files</div>
+map.remove("ciao")
+<div class="result">"not sure ..."</div>
     </div>
   </main>
 </div>

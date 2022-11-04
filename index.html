@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Core Language</title>
-	<link rel="stylesheet" href="css/base.css">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Core Language</title>
+  <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 <div class="container leftSpace">
-	<div class="header">
-		<div class="pageHeader">
-			<div class="topSpace"></div>
-			<div class="pageTitle">Core</div>
-			<div class="pageSubtitle">a modern, minimal programming language</div>
-		</div>
-	</div>
-	<div class="example">
-		<pre>
+  <header>
+    <div class="pageHeader">
+      <div class="topSpace"></div>
+      <div class="pageTitle">Core</div>
+      <div class="pageSubtitle">a modern, minimal programming language</div>
+    </div>
+  </header>
+  <main class="example">
+    <pre>
 <span class="core-keyword">class</span> <span class="core-type">Cat</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>: <span class="core-type">String</span>, <span class="core-keyword">let</span> <span class="core-member">lives</span>: <span class="core-type">Int64</span>)
 <span class="core-keyword">class</span> <span class="core-type">Dog</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>: <span class="core-type">String</span>, <span class="core-keyword">let</span> <span class="core-member">years</span>: <span class="core-type">Int64</span>)
 <span class="core-keyword">union</span> <span class="core-type">Pet</span> <span class="core-keyword">of</span> <span class="core-type">Cat</span>, <span class="core-type">Dog</span>
@@ -26,15 +26,17 @@
 
 describe(<span class="core-type">Cat</span>(<span class="core-literal">"Molly"</span>, <span class="core-literal">9</span>))
 <span class="core-comment">// → cat Molly has 9 lives</span></pre>
-	</div>
-	<ul class="navigation">
-		<div class="link"><a href="about.html">about</a></div>
-		<div class="link"><a href="manifesto.html">manifesto</a></div>
-    <div class="link"><a href="status.html">status</a></div>
-		<div class="link"><a href="tutorial.html">tutorial</a></div>
-		<div class="link"><a href="changes.html">changes</a></div>
-		<div class="linkFar"><a href="https://github.com/core-lang/core" target="_blank">source</a></div>
-	</ul>
+  </main>
+  <nav>
+    <ul>
+      <div class="link"><a href="about.html">about</a></div>
+      <div class="link"><a href="manifesto.html">manifesto</a></div>
+      <div class="link"><a href="status.html">status</a></div>
+      <div class="link"><a href="tutorial.html">tutorial</a></div>
+      <div class="link"><a href="changes.html">changes</a></div>
+      <div class="linkFar"><a href="https://github.com/core-lang/core" target="_blank">source</a></div>
+    </ul>
+  </nav>
 </div>
 </body>
 </html>

@@ -39,7 +39,11 @@
   --color-green:     #859900;
 
   font-family: var(--font-text);
+  font-size: 16px;
   font-weight: var(--font-weight-text-regular);
+  line-height: 1.4667;
+
+  background: #1e181e;
 }
 
 html, body {
@@ -52,15 +56,18 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  margin: 0px;
+}
+
 h4 {
   font-weight: var(--font-weight-text-semibold);
 }
 
-body {
-  background: #1e181e;
-  font-size: 15px;
-  line-height: 1.4667;
-  margin: 0px;
+main {
+  animation: fadein 1s;
+  margin-right: 20px;
+  padding-top: 32px;
 }
 
 /* --- links --- */
@@ -78,15 +85,6 @@ a:hover {
 
 /* -- content --- */
 
-.text {
-  max-width: 600px;
-  margin-right: 20px;
-  font-size: 16px;
-  font-weight: var(--font-weight-text-regular);
-  line-height: 28px;
-  animation: fadein 1s;
-}
-
 .container {
   position: relative;
   width: auto;
@@ -94,6 +92,7 @@ a:hover {
 
 .example {
   animation: fadein 1s;
+  padding-top: 0;
   padding-bottom: 32px;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -105,7 +104,7 @@ a:hover {
 
 /* --- nav --- */
 
-.navigation {
+nav > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -334,10 +333,6 @@ a:hover {
   padding-bottom: 40px;
 }
 
-.section:not(:first-child) {
-  border-top: solid 1px #444;
-}
-
 .moreLink a {
   color: white;
   font-weight: var(--font-weight-text-semibold);
@@ -470,7 +465,6 @@ code, pre {
   line-height: 22px;
   margin-bottom: 40px;
   margin-left: 30px;
-  max-width: 600px;
   white-space: pre-wrap;
 }
 

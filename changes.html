@@ -14,67 +14,133 @@
       <div class="pageSubtitle"> / changes </div>
     </div>
   </header>
-  <main>
-    <div>
-      <div class="chunk">
-        <div class="chunkLeft">2022</div>
-        <div class="chunkRight">
-          remove unary operator <code>!</code><br>
-          remove binary operator <code>%</code><br>
-          remove binary operators <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code><br>
-          remove control flow keywords <code>break</code> and <code>continue</code><br>
-          remove procedure syntax, require result types for functions<br>
-          change numeric literal separator from <code>_</code> to <code>'</code><br>
-          change type of integer literals from <code>Int32</code> to <code>Int64</code><br>
-          change number literal suffixes from <code>L</code>/<code>I</code>/<code>D</code>/<code>F</code> to <code>i64</code>/<code>i32</code>/<code>f64</code>/<code>f32</code><br>
-          add named arguments<br>
-          add unified condition expressions<br>
-          add intrinsics for rounding floats<br>
-          add intrinsics for total order comparison on floats<br>
-          add hash code field to <code>String</code><br>
-          add implementation of <code>trait Hash</code> for <code>String</code><br>
-          add higher-order functions to <code>Option</code> and <code>Result</code><br>
-          add implementation of <code>trait Equals</code>, <code>trait Hash</code>, <code>trait Stringable</code> to <code>Option</code> and <code>Result</code>
-        </div>
-      </div>
-      <div class="chunk">
-        <div class="chunkLeft">2021</div>
-        <div class="chunkRight">
-          fix precedence of <code>&</code><br>
-          refine annotation processing<br>
-          change naming of <code>Option</code> and <code>Result</code> methods<br>
-          add intrinsics for the absolute value of floats<br>
-          add more functionality to <code>Array</code>, <code>Result</code>, <code>String</code> and <code>Vector</code> types
-        </div>
-      </div>
-      <div class="chunk">
-        <div class="chunkLeft">2020</div>
-        <div class="chunkRight">
-          remove <code>nil</code><br>
-          remove exceptions<br>
-          remove <code>loop</code> keyword<br>
+  <main id="changes">
+    <table>
+      <tr>
+        <th>2022</th><th></th>
+      </tr>
+      <tr>
+        <td>removed</td>
+        <td>
+          operator <code>-></code><br>
+          <span class="label">wip</span> operator <code>=></code><br>
+          keyword <code>mut</code><br>
+          <span class="label">wip</span> keyword <code>match</code><br>
+          unary operator <code>!</code><br>
+          binary operator <code>%</code><br>
+          binary operators <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code><br>
+          procedure syntax<br>
+          mutable function parameters<br>
+          control flow keywords <code>break</code> and <code>continue</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>changed</td>
+        <td>
+          <span class="label">wip</span> keyword <code>enum</code> to <code>union</code><br>
+          name of class <code>Vec</code> to <code>List</code><br>
+          numeric literal separator from <code>_</code> to <code>'</code><br>
+          type of integer literals from <code>Int32</code> to <code>Int64</code><br>
+          require result type for functions and lambdas<br>
+          number literal suffixes from <code>L</code>/<code>I</code>/<code>D</code>/<code>F</code> to <code>i64</code>/<code>i32</code>/<code>f64</code>/<code>f32</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>added</td>
+        <td>
+          <span class="label">wip</span> keyword <code>is</code><br>
+          named arguments<br>
+          <span class="label">wip</span> semicolon inference<br>
+          hash code field to <code>String</code><br>
+          intrinsics for rounding floats<br>
+          unified condition expressions<br>
+          <code>var</code> as a replacement for <code>let mut</code><br>
+          implementation of <code>trait Hash</code> for <code>String</code><br>
+          intrinsics for total order comparison on floats<br>
+          higher-order functions to classes <code>Array</code> and <code>List</code><br>
+          higher-order functions to enums <code>Option</code> and <code>Result</code><br>
+          implementations of traits <code>Equals</code>, <code>Hash</code>, <code>Stringable</code> to enums <code>Option</code> and <code>Result</code>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>2021</th><th></th>
+      </tr>
+      <tr>
+        <td>changed</td>
+        <td>
+          annotation processing<br>
+          precedence of operator <code>&</code><br>
+          name of panicking methods in <code>Option</code> and <code>Result</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>added</td>
+        <td>
+          intrinsics for the absolute value of floats<br>
+          more functionality to types <code>Array</code>, <code>Result</code>, <code>String</code> and <code>Vector</code>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>2020</th><th></th>
+      </tr>
+      <tr>
+        <td>removed</td>
+        <td>
+          keyword <code>nil</code><br>
+          exceptions<br>
+          keyword <code>loop</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>changed</td>
+        <td>
           change result type syntax from <code>-></code> to <code>:</code><br>
-          add enums<br>
-          add tuples<br>
-          add modules<br>
-          add varargs<br>
-          add <code>annotation</code> keyword<br>
-          add popcnt/lzcount/tzcount intrinsics<br>
-          add <code>Zero</code> and <code>Sizable</code> traits
-        </div>
-      </div>
-      <div class="chunk">
-        <div class="chunkLeft">2019</div>
-        <div class="chunkRight">
-          remove secondary constructors<br>
-          remove modifiers, replaced with annotations<br>
-          change syntax of generics from <code><></code>/<code>::<></code> to <code>[]</code><br>
-          change name of <code>Int</code>/<code>Long</code> and <code>Float</code>/<code>Double</code> to <code>Int32</code>/<code>Int64</code> and <code>Float32</code>/<code>Float64</code><br>
-          add universal <code>===</code> operation<br>
-          add <code>Equals</code>, <code>Identity</code>, <code>Hash</code>, <code>Default</code>, <code>Comparable</code>, <code>Sortable</code>, <code>Stringable</code> and <code>Option</code>
-        </div>
-      </div>
-    </div>
+        </td>
+      </tr>
+      <tr>
+        <td>added</td>
+        <td>
+          enums<br>
+          tuples<br>
+          modules<br>
+          varargs<br>
+          keyword <code>annotation</code><br>
+          traits <code>Zero</code> and <code>Sizable</code><br>
+          intrinsics for bit manipulation instructions <code>popcnt</code>/<code>lzcount</code>/<code>tzcount</code>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>2019</th><th></th>
+      </tr>
+      <tr>
+        <td>removed</td>
+        <td>
+          secondary constructors<br>
+          modifiers, replaced with annotations<br>
+        </td>
+      </tr>
+      <tr>
+        <td>changed</td>
+        <td>
+          syntax of generics from <code><></code>/<code>::<></code> to <code>[]</code><br>
+          name of <code>Int</code>/<code>Long</code> and <code>Float</code>/<code>Double</code> to <code>Int32</code>/<code>Int64</code> and <code>Float32</code>/<code>Float64</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>added</td>
+        <td>
+          type <code>Option</code><br>
+          universal <code>===</code> operation<br>
+          traits <code>Equals</code>, <code>Identity</code>, <code>Hash</code>, <code>Default</code>, <code>Comparable</code>, <code>Sortable</code>, <code>Stringable</code>
+        </td>
+      </tr>
+    </table>
   </main>
 </div>
 </body>

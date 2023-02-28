@@ -24,8 +24,12 @@
   ... <span class="core-keyword">is</span> <span class="core-type">Cat</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>, <span class="core-keyword">let</span> <span class="core-member">lives</span>) { <span class="core-literal">"cat <span class="core-interp">$name</span> has <span class="core-interp">$lives</span> lives"</span> }
   ... <span class="core-keyword">is</span> <span class="core-type">Dog</span>(<span class="core-keyword">let</span> <span class="core-member">name</span>, <span class="core-keyword">let</span> <span class="core-member">years</span>) { <span class="core-literal">"dog <span class="core-interp">$name</span> is <span class="core-interp">$years</span> of age"</span> }
 
-describe(<span class="core-type">Cat</span>(<span class="core-literal">"Molly"</span>, <span class="core-literal">9</span>))
-<span class="core-comment">// → cat Molly has 9 lives</span></pre>
+<span class="core-type">List</span>(<span class="core-type">Cat</span>(<span class="core-literal">"Lila"</span>, <span class="core-literal">7</span>), <span class="core-type">Dog</span>(<span class="core-literal">"Fenton"</span>, <span class="core-literal">6</span>), <span class="core-type">Cat</span>(<span class="core-literal">"Molly"</span>, <span class="core-literal">9</span>))
+  .retain(|<span class="core-member">p</span>| <span class="core-member">p</span>.name.size > <span class="core-literal">5</span>)
+  .map   (|<span class="core-member">p</span>| describe(<span class="core-member">p</span>))
+  .each  (|<span class="core-member">d</span>| println(<span class="core-member">d</span>))
+<span class="core-comment">// → cat Molly has 9 lives</span>
+<span class="core-comment">// → dog Fenton is 6 years of age</span></pre>
   </main>
   <nav>
     <ul>

@@ -6,12 +6,30 @@
   src: url("../fonts/Inter.woff2") format("woff2");
 }
 @font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 100 900;
+  font-style: normal;
+  size-adjust: 110%;
+  src:  local('Sofia Sans'),
+  url("../fonts/SofiaSans.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 100 900;
+  font-style: italic;
+  size-adjust: 110%;
+  src:  local('Sofia Sans Italic'),
+  url("../fonts/SofiaSans-Italic.ttf") format("truetype");
+}
+@font-face {
   font-family: 'Fira Code';
   font-weight: 300 700;
   src: url("../fonts/FiraCode.woff2") format("woff2");
 }
 
 :root {
+  --font-head: 'Sofia Sans', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
+  --font-weight-head-thin: 100;
   --font-text: 'Inter', 'Nimbus Sans', 'Helvetica Neue', 'Helvetica', 'Sans', sans-serif;
   --font-weight-text-regular: 300;
   --font-weight-text-semibold: 500;
@@ -110,6 +128,10 @@ nav > ul {
   margin: 0;
   padding: 0;
   animation: fadein 1.5s;
+}
+
+nav .link {
+  font-family: var(--font-head);
 }
 
 .link, .linkFar, .linkDocs {
@@ -225,16 +247,11 @@ nav > ul {
 .pageTitle {
   text-transform: lowercase;
   display: block;
+  font-family: var(--font-head);
   font-size: 70px;
-  line-height: 35px;
-  font-weight: 100;
+  font-weight: var(--font-weight-head-thin);
   letter-spacing: -2px;
-}
-
-.pageTitle a {
-  font-family: inherit;
-  text-transform: inherit;
-  font-weight: inherit;
+  line-height: 35px;
 }
 
 .pageSubtitle {

@@ -1,9 +1,18 @@
 @font-face {
   font-family: 'Inter';
+  font-style:  normal;
   font-weight: 100 900;
-  font-style: oblique 0deg 10deg;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv05', 'cv08', 'cv09', 'cv10';
-  src: url("../fonts/Inter.woff2") format("woff2");
+  font-display: swap;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 100 900;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv05', 'cv08', 'cv09', 'cv10';
+  font-display: swap;
+  src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
 }
 @font-face {
   font-family: 'Sofia Sans';
@@ -130,8 +139,10 @@ nav > ul {
   animation: fadein 1.5s;
 }
 
-nav .link {
+nav .link,
+nav .linkFar {
   font-family: var(--font-head);
+  letter-spacing: -3px;
 }
 
 .link, .linkFar, .linkDocs {

@@ -17,6 +17,35 @@
   <main id="changes">
     <table>
       <tr>
+        <th>2024</th><th></th>
+      </tr>
+      <tr>
+        <td>removed</td>
+        <td>
+          <span class="label">wip</span> operator <code>::</code><br>
+          <span class="label">wip</span> enums and the keyword <code>enum</code><br>
+        </td>
+      </tr>
+      <tr>
+        <td>changed</td>
+        <td>
+          <code>Float64#hash</code> and <code>Float32#hash</code> to cooperate with <code>Equals</code> and <code>Identity</code> semantics<br>
+        </td>
+      </tr>
+      <tr>
+        <td>added</td>
+        <td>
+          Base64 encoder<br>
+          <code>Array#includes</code>, <code>List#includes</code>, <code>HashMap#includes</code>, <code>HashSet#includes</code><br>
+          <span class="label">wip</span> unions<br>
+          <span class="label">wip</span> RiscV backend<br>
+          <span class="label">wip</span> semicolon inference<br>
+          <span class="label">wip</span> language support for *.properties files<br>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
         <th>2023</th><th></th>
       </tr>
       <tr>
@@ -25,27 +54,25 @@
           operator <code>=></code><br>
           keyword <code>match</code><br>
           catch-all branch <code>_</code><br>
-          <span class="label">wip</span> operator <code>::</code><br>
-          <span class="label">wip</span> enums and the keyword <code>enum</code><br>
         </td>
       </tr>
       <tr>
         <td>changed</td>
         <td>
           keyword <code>struct</code> to <code>value</code><br>
+          <code>use</code> declarations to use <code>.</code> instead of <code>::</code>
         </td>
       </tr>
       <tr>
         <td>added</td>
         <td>
+          keyword <code>is</code><br>
+          keyword <code>union</code><br>
+          RiscV (macro) assembler<br>
           unified condition expressions<br>
           intrinsics for total order comparison of floats on arm64<br>
           <code>Int64#reverseBytes</code>, <code>Int64#reverseBits</code><br>
           <code>Int32#reverseBytes</code>, <code>Int32#reverseBits</code>, <code>Int32#asInt64</code><br>
-          <span class="label">wip</span> keyword <code>is</code><br>
-          <span class="label">wip</span> semicolon inference<br>
-          <span class="label">wip</span> RiscV backend<br>
-          <span class="label">wip</span> unions and the keyword <code>union</code><br>
         </td>
       </tr>
     </table>

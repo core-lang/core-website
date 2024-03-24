@@ -66,6 +66,7 @@
   --color-cyan:      #2aa198;
   --color-green:     #859900;
 
+  --text-color:      #f4f4ec;
   font-family: var(--font-text);
   font-size: 16px;
   font-weight: var(--font-weight-text-regular);
@@ -80,7 +81,7 @@ html, body {
 }
 
 html {
-  color: #f4f4ec;
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -356,10 +357,17 @@ nav .linkFar {
   }
 }
 
-.section {
+section {
   animation: fadein 1s;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.no-bullet-points {
+  list-style-type: none;
+}
+
+a.link-hidden {
+  color: var(--text-color);;
 }
 
 .moreLink a {
@@ -515,6 +523,7 @@ code, pre {
   color: var(--color-base3);
   font-family: var(--font-mono);
   font-weight: var(--font-weight-code-regular);
+  white-space: break-spaces;
 }
 
 .core-keyword {

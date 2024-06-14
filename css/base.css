@@ -461,6 +461,23 @@ a.link-hidden {
   margin-right: 10em;
 }
 
+.operators {
+  border-collapse: separate;
+  border-spacing: 16px;
+  th:last-child {
+    text-align: start;
+  }
+  td:first-child {
+    text-align: center;
+  }
+}
+
+.operator {
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+}
+
 .description a:link {
   color: #aaa;
 }

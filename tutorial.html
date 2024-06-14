@@ -51,15 +51,6 @@ true      false
 <div class="explanation">some values of type String</div>
     </div>
 
-    <h3>Math</h3>
-    <div class="code">
-1 + 1
-<div class="result">2</div>
-
-2.0.sqrt()
-<div class="result">1.414214</div>
-    </div>
-
     <h3>Definitions</h3>
     <h4>Constants</h4>
     <div class="code">
@@ -152,6 +143,51 @@ for i in List[Int64](1, 2, 3) {
 }
 <div class="result">"123"</div>
     </div>
+
+<h3>Operators</h3>
+<table class="operators">
+    <thead>
+    <tr>
+        <th>Precedence</th>
+        <th>Operator</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td><code><span class="operator">=</span></code></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><code><span class="operator">||</span></code></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><code><span class="operator">&&</span></code></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><code><span class="operator">==</span><span class="operator">!=</span><span class="operator"><</span><span class="operator"><=</span><span class="operator">></span><span class="operator">>=</span><span class="operator">===</span><span class="operator">!==</span></code></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><code><span class="operator">+</span><span class="operator">-</span><span class="operator">|</span><span class="operator">^</span></code></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><code><span class="operator">*</span><span class="operator">/</span><span class="operator">&</span></code></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class=code>
+1 + 1
+<div class="result">2</div>
+
+23.0 + 42.0 / 2.0
+<div class="result">44.0</div>
+</div>
+
     </div>
 
     <div id="doc-std">

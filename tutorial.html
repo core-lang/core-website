@@ -208,7 +208,24 @@ c.isEmpty()
     </div>
 
     <h4>Options</h4>
-    <div class=code>...</div>
+    <div class=code>
+let some = Some[String]("value")
+<div class="result">Some("value")</div>
+let none = None[String]()
+<div class="result">None</div>
+
+some.isSome()
+<div class="result">true</div>
+none.isSome()
+<div class="result">false</div>
+
+some.contains("value")
+<div class="result">true</div>
+some.contains("other")
+<div class="result">false</div>
+none.contains("value")
+<div class="result">false</div>
+    </div>
 
     <h4>Lists</h4>
     <div class=code>
